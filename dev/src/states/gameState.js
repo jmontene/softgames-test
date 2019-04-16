@@ -5,6 +5,7 @@ export default class GameState{
         this.game = undefined;
         this.scene = new PIXI.Container();
         this.scene.visible = false;
+        this.name = "GameState";
     }
 
     onEnter(){}

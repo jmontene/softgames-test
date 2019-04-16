@@ -1,5 +1,29 @@
 {"frames": {
 
+"button_normal.png":
+{
+	"frame": {"x":65,"y":0,"w":190,"h":49},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":190,"h":49},
+	"sourceSize": {"w":190,"h":49}
+},
+"button_over.png":
+{
+	"frame": {"x":0,"y":137,"w":190,"h":49},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":190,"h":49},
+	"sourceSize": {"w":190,"h":49}
+},
+"button_pressed.png":
+{
+	"frame": {"x":0,"y":92,"w":190,"h":45},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":190,"h":45},
+	"sourceSize": {"w":190,"h":45}
+},
 "card.png":
 {
 	"frame": {"x":0,"y":0,"w":65,"h":92},
@@ -13,8 +37,8 @@
 	"version": "1.0",
 	"image": "mainAtlas.png",
 	"format": "RGBA8888",
-	"size": {"w":65,"h":92},
+	"size": {"w":255,"h":186},
 	"scale": "1",
-	"smartupdate": "$TexturePacker:SmartUpdate:cf4920bd723470ca4299d33cf4186dd2:136d56a7ee5e3a13504d75dca8891dc3:eb36726edbc7063f335dbc5f8316ac1e$"
+	"smartupdate": "$TexturePacker:SmartUpdate:b00f41a3acb325ba2b45c646af196a5e:e45873e6b67a01d7b432d0b34b238e51:eb36726edbc7063f335dbc5f8316ac1e$"
 }
 }

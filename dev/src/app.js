@@ -27,6 +27,7 @@ function startApp(){
     window.addEventListener('resize', resize, false);
 
     let states = [
+        new GameStates.MainMenu(),
         new GameStates.StateCards()
     ]
     let game = new Game(app,states,states[0]);

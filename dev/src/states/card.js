@@ -36,4 +36,14 @@ export default class Card extends PIXI.Sprite{
             this.finished = true;
         }
     }
+
+    reset(){
+        this.position.set(this.initX, this.initY);
+        this.switched = false;
+        this.moveTime = 0;
+        let parent = this.parent;
+        parent.removeChild(this);
+        parent.addChild(this);
+        this.finished = false;
+    }
 }
