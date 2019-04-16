@@ -2,7 +2,7 @@ import * as PIXI from "pixi.js";
 
 let Loader = PIXI.loader;
 let Resources = Loader.resources;
-let AssetPath = "../assets/";
+let AssetPath = "./assets/";
 let Atlases = new Map();
 
 function AddAtlas(key, filename){
