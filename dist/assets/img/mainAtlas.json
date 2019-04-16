@@ -2,7 +2,7 @@
 
 "button_normal.png":
 {
-	"frame": {"x":65,"y":0,"w":190,"h":49},
+	"frame": {"x":0,"y":186,"w":190,"h":49},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":190,"h":49},
@@ -26,19 +26,43 @@
 },
 "card.png":
 {
-	"frame": {"x":0,"y":0,"w":65,"h":92},
+	"frame": {"x":112,"y":0,"w":65,"h":92},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":65,"h":92},
 	"sourceSize": {"w":65,"h":92}
+},
+"checkmark.png":
+{
+	"frame": {"x":74,"y":0,"w":38,"h":36},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":36},
+	"sourceSize": {"w":38,"h":36}
+},
+"cross.png":
+{
+	"frame": {"x":36,"y":0,"w":38,"h":36},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":36},
+	"sourceSize": {"w":38,"h":36}
+},
+"tick.png":
+{
+	"frame": {"x":0,"y":0,"w":36,"h":36},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":36,"h":36},
+	"sourceSize": {"w":36,"h":36}
 }},
 "meta": {
 	"app": "https://www.codeandweb.com/texturepacker",
 	"version": "1.0",
 	"image": "mainAtlas.png",
 	"format": "RGBA8888",
-	"size": {"w":255,"h":186},
+	"size": {"w":190,"h":235},
 	"scale": "1",
-	"smartupdate": "$TexturePacker:SmartUpdate:b00f41a3acb325ba2b45c646af196a5e:e45873e6b67a01d7b432d0b34b238e51:eb36726edbc7063f335dbc5f8316ac1e$"
+	"smartupdate": "$TexturePacker:SmartUpdate:f260ea5bf934600d5ec87d8b1f2322d3:da1fc90c4e7c94e92fe687143ba7262e:eb36726edbc7063f335dbc5f8316ac1e$"
 }
 }
