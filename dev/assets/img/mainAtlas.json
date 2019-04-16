@@ -1,0 +1,20 @@
+{"frames": {
+
+"card.png":
+{
+	"frame": {"x":0,"y":0,"w":65,"h":92},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":65,"h":92},
+	"sourceSize": {"w":65,"h":92}
+}},
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "mainAtlas.png",
+	"format": "RGBA8888",
+	"size": {"w":65,"h":92},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:cf4920bd723470ca4299d33cf4186dd2:136d56a7ee5e3a13504d75dca8891dc3:eb36726edbc7063f335dbc5f8316ac1e$"
+}
+}
