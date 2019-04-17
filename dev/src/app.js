@@ -2,7 +2,6 @@ import Style from "Styles/style.css";
 import * as PIXI from 'pixi.js';
 import Game from './game.js';
 import * as GameStates from 'GameStates/gameStates.js';
-
 import * as AssetsRepository from "Utils/assetsRepository.js"
 
 let app = new PIXI.Application({
@@ -28,7 +27,8 @@ function startApp(){
 
     let states = [
         new GameStates.MainMenu(),
-        new GameStates.StateCards()
+        new GameStates.StateCards(),
+        new GameStates.StateTextTool()
     ]
     let game = new Game(app,states,states[0]);
     app.ticker.add(delta => game.gameLoop(delta));

@@ -1,5 +1,5 @@
-import GameState from "./gameState.js";
-import Button from "./button";
+import GameState from "GameStates/gameState.js";
+import Button from "Utils/button.js";
 import Card from "./card.js";
 import * as PIXI from "pixi.js";
 import * as AssetsRepository from "Utils/assetsRepository.js";
@@ -29,9 +29,12 @@ export default class StateCards extends GameState{
         let fx = finalX;
         let fy = finalY;
 
+        this.cardContainer = new PIXI.particles.ParticleContainer();
+        this.scene.addChild(this.cardContainer);
+
         for(let i = 0; i < numberOfCards; ++i){
             let card = new Card(x, y, fx, fy, timeToGoal);
-            this.scene.addChild(card);
+            this.cardContainer.addChild(card);
             x += offset;
             y += offset;
             fx -= offset;
