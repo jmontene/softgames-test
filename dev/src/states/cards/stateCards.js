@@ -4,41 +4,42 @@ import Card from "./card.js";
 import * as PIXI from "pixi.js";
 import * as AssetsRepository from "Utils/assetsRepository.js";
 
-let numberOfCards = 144;
-let offset = 1;
-let initialX = 200;
-let initialY = 200;
-let finalX = 700;
-let finalY = 350;
-let timeToGoal = 2;
-let timeForNewCard = 1;
-
 export default class StateCards extends GameState{
     constructor(game){
         super(game);
 
         this.name = "StateCards";
 
+        this.timeToGoal = 2;
+        this.timeForNewCard = 1;
+        this.offset = 1;
+        this.numberOfCards = 144;
+
+        this.initialX = window.innerWidth/2 - 300;
+        this.initialY = window.innerHeight/2 - 400;
+        this.finalX = window.innerWidth/2 + 300;
+        this.finalY = window.innerHeight/2 - 250;
+
         this.cards = [];
         this.movingCards = [];
-        this.curIndex = numberOfCards-1;
+        this.curIndex = this.numberOfCards-1;
         this.newCardTime = 0;
 
-        let x = initialX;
-        let y = initialY;
-        let fx = finalX;
-        let fy = finalY;
+        let x = this.initialX;
+        let y = this.initialY;
+        let fx = this.finalX;
+        let fy = this.finalY;
 
         this.cardContainer = new PIXI.particles.ParticleContainer();
         this.scene.addChild(this.cardContainer);
 
-        for(let i = 0; i < numberOfCards; ++i){
-            let card = new Card(x, y, fx, fy, timeToGoal);
+        for(let i = 0; i < this.numberOfCards; ++i){
+            let card = new Card(x, y, fx, fy, this.timeToGoal);
             this.cardContainer.addChild(card);
-            x += offset;
-            y += offset;
-            fx -= offset;
-            fy -= offset;
+            x += this.offset;
+            y += this.offset;
+            fx -= this.offset;
+            fy -= this.offset;
 
             this.cards.push(card);
         }
@@ -66,7 +67,7 @@ export default class StateCards extends GameState{
         this.fpsText.text = "FPS: " + (this.game.fps().toFixed(2));
 
         this.newCardTime += elapsedDelta;
-        if(this.curIndex >= 0 && this.newCardTime >= timeForNewCard){
+        if(this.curIndex >= 0 && this.newCardTime >= this.timeForNewCard){
             this.newCardTime = 0;
             this.movingCards.push(this.cards[this.curIndex--]);
         }
@@ -85,7 +86,7 @@ export default class StateCards extends GameState{
             this.movingCards.pop();
         }
         this.newCardTime = 0;
-        this.curIndex = numberOfCards-1;
+        this.curIndex = this.numberOfCards-1;
         for(let card of this.cards){
             card.reset();
         }

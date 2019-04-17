@@ -1,11 +1,17 @@
 import GameState from "GameStates/gameState.js";
 import Button from "Utils/button.js";
 import * as AssetsRepository from "Utils/assetsRepository.js";
+import * as PIXI from 'pixi.js';
 
 export default class MainMenu extends GameState{
     constructor(game){
         super(game);
         this.name = "MainMenu";
+
+        this.titleText = new PIXI.Text("Main Menu");
+        this.titleText.position.set(window.innerWidth/2,window.innerHeight/2 - 150);
+        this.titleText.anchor.set(0.5,0.5);
+        this.scene.addChild(this.titleText);
 
         this.cardButton = new Button({
             "normal" : AssetsRepository.FromAtlas('mainAtlas', 'button_normal.png'),
@@ -22,7 +28,7 @@ export default class MainMenu extends GameState{
             "pressed" : AssetsRepository.FromAtlas('mainAtlas', 'button_pressed.png')
         }, "TextTool");
         this.toolButton.addCallback(this.onToolButtonPressed, this);
-        this.toolButton.position.set(window.innerWidth/2,window.innerHeight/2);
+        this.toolButton.position.set(window.innerWidth/2,window.innerHeight/2 - 50);
         this.scene.addChild(this.toolButton);
 
         this.fireButton = new Button({
@@ -31,7 +37,7 @@ export default class MainMenu extends GameState{
             "pressed" : AssetsRepository.FromAtlas('mainAtlas', 'button_pressed.png')
         }, "Fire");
         this.fireButton.addCallback(this.onFireButtonPressed, this);
-        this.fireButton.position.set(window.innerWidth/2,window.innerHeight/2 + 100);
+        this.fireButton.position.set(window.innerWidth/2,window.innerHeight/2);
         this.scene.addChild(this.fireButton);
     }
 
