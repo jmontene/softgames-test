@@ -3,8 +3,8 @@ import Button from "Utils/button.js";
 import * as AssetsRepository from "Utils/assetsRepository.js";
 
 export default class MainMenu extends GameState{
-    constructor(){
-        super();
+    constructor(game){
+        super(game);
         this.name = "MainMenu";
 
         this.cardButton = new Button({
@@ -24,6 +24,15 @@ export default class MainMenu extends GameState{
         this.toolButton.addCallback(this.onToolButtonPressed, this);
         this.toolButton.position.set(window.innerWidth/2,window.innerHeight/2);
         this.scene.addChild(this.toolButton);
+
+        this.fireButton = new Button({
+            "normal" : AssetsRepository.FromAtlas('mainAtlas', 'button_normal.png'),
+            "over" : AssetsRepository.FromAtlas('mainAtlas', 'button_over.png'),
+            "pressed" : AssetsRepository.FromAtlas('mainAtlas', 'button_pressed.png')
+        }, "Fire");
+        this.fireButton.addCallback(this.onFireButtonPressed, this);
+        this.fireButton.position.set(window.innerWidth/2,window.innerHeight/2 + 100);
+        this.scene.addChild(this.fireButton);
     }
 
     onCardButtonPressed(){
@@ -32,5 +41,9 @@ export default class MainMenu extends GameState{
 
     onToolButtonPressed(){
         this.game.transitionToState('StateTextTool');
+    }
+
+    onFireButtonPressed(){
+        this.game.transitionToState('StateFire');
     }
 }

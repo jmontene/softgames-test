@@ -18,8 +18,8 @@ let maxLength = 5;
 let timeToChange = 2;
 
 export default class StateTextTool extends GameState{
-    constructor(){
-        super();
+    constructor(game){
+        super(game);
         this.name = "StateTextTool";
         this.changeTime = 0;
 

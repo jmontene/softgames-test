@@ -14,8 +14,8 @@ let timeToGoal = 2;
 let timeForNewCard = 1;
 
 export default class StateCards extends GameState{
-    constructor(){
-        super();
+    constructor(game){
+        super(game);
 
         this.name = "StateCards";
 

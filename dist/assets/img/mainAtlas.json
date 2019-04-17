@@ -2,7 +2,7 @@
 
 "button_normal.png":
 {
-	"frame": {"x":0,"y":186,"w":190,"h":49},
+	"frame": {"x":0,"y":93,"w":190,"h":49},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":190,"h":49},
@@ -10,7 +10,7 @@
 },
 "button_over.png":
 {
-	"frame": {"x":0,"y":137,"w":190,"h":49},
+	"frame": {"x":0,"y":143,"w":190,"h":49},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":190,"h":49},
@@ -18,7 +18,7 @@
 },
 "button_pressed.png":
 {
-	"frame": {"x":0,"y":92,"w":190,"h":45},
+	"frame": {"x":0,"y":193,"w":190,"h":45},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":190,"h":45},
@@ -26,7 +26,7 @@
 },
 "card.png":
 {
-	"frame": {"x":112,"y":0,"w":65,"h":92},
+	"frame": {"x":145,"y":0,"w":65,"h":92},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":65,"h":92},
@@ -34,7 +34,7 @@
 },
 "checkmark.png":
 {
-	"frame": {"x":74,"y":0,"w":38,"h":36},
+	"frame": {"x":106,"y":0,"w":38,"h":36},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":36},
@@ -42,15 +42,23 @@
 },
 "cross.png":
 {
-	"frame": {"x":36,"y":0,"w":38,"h":36},
+	"frame": {"x":67,"y":0,"w":38,"h":36},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":36},
 	"sourceSize": {"w":38,"h":36}
 },
+"fire.png":
+{
+	"frame": {"x":0,"y":0,"w":29,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":29,"h":29},
+	"sourceSize": {"w":29,"h":29}
+},
 "tick.png":
 {
-	"frame": {"x":0,"y":0,"w":36,"h":36},
+	"frame": {"x":30,"y":0,"w":36,"h":36},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":36,"h":36},
@@ -61,8 +69,8 @@
 	"version": "1.0",
 	"image": "mainAtlas.png",
 	"format": "RGBA8888",
-	"size": {"w":190,"h":235},
+	"size": {"w":210,"h":238},
 	"scale": "1",
-	"smartupdate": "$TexturePacker:SmartUpdate:f260ea5bf934600d5ec87d8b1f2322d3:da1fc90c4e7c94e92fe687143ba7262e:eb36726edbc7063f335dbc5f8316ac1e$"
+	"smartupdate": "$TexturePacker:SmartUpdate:915104155a7af61e7b0d37e9ab87e1d2:1ad4d76c64d2b108fff49f56cc302a53:eb36726edbc7063f335dbc5f8316ac1e$"
 }
 }

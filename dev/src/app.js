@@ -1,6 +1,6 @@
 import Style from "Styles/style.css";
-import * as PIXI from 'pixi.js';
 import Game from './game.js';
+import * as PIXI from 'pixi.js';
 import * as GameStates from 'GameStates/gameStates.js';
 import * as AssetsRepository from "Utils/assetsRepository.js"
 
@@ -25,13 +25,14 @@ function startApp(){
 
     window.addEventListener('resize', resize, false);
 
+    let game = new Game(app);
     let states = [
-        new GameStates.MainMenu(),
-        new GameStates.StateCards(),
-        new GameStates.StateTextTool()
+        new GameStates.MainMenu(game),
+        new GameStates.StateCards(game),
+        new GameStates.StateTextTool(game),
+        new GameStates.StateFire(game)
     ]
-    let game = new Game(app,states,states[0]);
-    app.ticker.add(delta => game.gameLoop(delta));
+    game.start(states, "MainMenu");
 }
 
 AssetsRepository.LoadAssets([
