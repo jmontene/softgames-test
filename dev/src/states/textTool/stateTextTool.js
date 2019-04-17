@@ -3,25 +3,25 @@ import TextTool from "./textTool.js";
 import Button from "Utils/button.js";
 import * as AssetsRepository from "Utils/assetsRepository.js";
 
-let texts = [
-    "Good",
-    "Bad",
-    "Great",
-    "Red",
-    "White",
-    "Blue",
-];
-
-let minFontSize = 5;
-let maxFontSize = 40;
-let maxLength = 5;
-let timeToChange = 2;
-
 export default class StateTextTool extends GameState{
     constructor(game){
         super(game);
         this.name = "StateTextTool";
         this.changeTime = 0;
+
+        this.texts = [
+            "Good",
+            "Bad",
+            "Great",
+            "Red",
+            "White",
+            "Blue",
+        ];
+
+        this.minFontSize = 5;
+        this.maxFontSize = 40;
+        this.maxLength = 5;
+        this.timeToChange = 2;
 
         this.possibleTextures = [
             AssetsRepository.FromAtlas('mainAtlas', 'checkmark.png'),
@@ -50,13 +50,13 @@ export default class StateTextTool extends GameState{
     }
 
     makeToolElements(){
-        let length = 1 + Math.floor(Math.random() * maxLength);
+        let length = 1 + Math.floor(Math.random() * this.maxLength);
         let elems = [];
         for(let i=0;i<length;++i){
             let choice = Math.round(Math.random());
             if(choice == 0){
-                let randText = texts[Math.floor(Math.random() * texts.length)];
-                let randFont = minFontSize + (Math.round(Math.random() * (maxFontSize - minFontSize)));
+                let randText = this.texts[Math.floor(Math.random() * this.texts.length)];
+                let randFont = this.minFontSize + (Math.round(Math.random() * (this.maxFontSize - this.minFontSize)));
                 elems.push(new PIXI.Text(randText, {
                     fontSize: randFont
                 }));
@@ -70,7 +70,7 @@ export default class StateTextTool extends GameState{
 
     update(delta){
         this.changeTime += this.game.elapsedMS() * 0.001;
-        if(this.changeTime >= timeToChange){
+        if(this.changeTime >= this.timeToChange){
             this.changeTime = 0;
             this.scene.removeChild(this.tool);
             this.refreshTool();

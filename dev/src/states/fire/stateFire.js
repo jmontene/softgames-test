@@ -21,11 +21,11 @@ export default class StateFire extends GameState{
                 1,
                 0,
                 true,
-                4.5, 5,      //Angle
-                16,24,       //Size
+                4.5, 5,        //Angle
+                16,24,         //Size
                 0.5, 0.7,      //Speed
-                0.005,0.01,  //Speed Scaling
-                0.02,0.06   //Alpha Speed
+                0.005,0.01,    //Speed Scaling
+                0.02,0.06      //Alpha Speed
             )
         );
         this.fireEmitter.stop();

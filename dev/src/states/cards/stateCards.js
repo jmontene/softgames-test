@@ -54,7 +54,7 @@ export default class StateCards extends GameState{
             "pressed" : AssetsRepository.FromAtlas('mainAtlas', 'button_pressed.png')
         }, "Go Back");
         this.backButton.addCallback(this.onBackButtonPressed, this);
-        this.backButton.position.set(window.innerWidth/2,600);
+        this.backButton.position.set(window.innerWidth/2,window.innerHeight/2 + 200);
         this.scene.addChild(this.backButton);
     }
 
